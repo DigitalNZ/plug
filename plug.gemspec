@@ -1,4 +1,4 @@
-$:.push File.expand_path("../lib", __FILE__)
+$:.push File.expand_path('../lib', __FILE__)
 
 # Maintain your gem's version:
 require 'plug/version'
@@ -11,10 +11,10 @@ Gem::Specification.new do |s|
   s.email       = ['benedict@boost.co.nz']
   s.homepage    = 'https://github.com/hapiben/plug'
   s.summary     = 'Feature flipper with UI + Redis'
-  s.description = "Feature flipper with UI + Redis"
+  s.description = 'Feature flipper with UI + Redis'
   s.license     = 'MIT'
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   s.add_dependency 'rails', '~> 5.1.4'
   s.add_dependency 'sass-rails', '~> 5.0'
