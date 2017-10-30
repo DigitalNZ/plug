@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'redis'
   s.add_dependency 'haml-rails'
   s.add_dependency 'jquery-rails'
+  s.add_dependency 'foundation-rails', '~> 6.4.1.2'
 
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'rspec-rails', '~> 3.7.1'
