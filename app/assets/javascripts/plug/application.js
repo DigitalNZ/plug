@@ -12,6 +12,5 @@
 //
 //= require jquery
 //= require foundation
-//= require_self
 
 $(function(){ $(document).foundation(); });

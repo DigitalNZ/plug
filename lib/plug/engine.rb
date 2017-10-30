@@ -1,3 +1,5 @@
+require 'jquery-rails'
+require 'foundation-rails'
 require 'haml'
 
 module Plug
