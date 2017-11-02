@@ -1,6 +1,7 @@
-require 'jquery-rails'
-require 'foundation-rails'
-require 'haml'
+# Require all dependencies
+Gem.loaded_specs['plug'].dependencies.each do |dependency|
+ require dependency.name
+end
 
 module Plug
   class Engine < ::Rails::Engine

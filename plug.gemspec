@@ -22,9 +22,12 @@ Gem::Specification.new do |s|
   s.add_dependency 'haml-rails'
   s.add_dependency 'jquery-rails'
   s.add_dependency 'foundation-rails', '~> 6.4.1.2'
+  s.add_dependency 'font-awesome-rails'
 
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'rspec-rails', '~> 3.7.1'
   s.add_development_dependency 'rails-controller-testing', '~> 1.0.2'
   s.add_development_dependency 'factory_bot_rails'
+  s.add_development_dependency 'capybara'
+  s.add_development_dependency 'selenium-webdriver'
 end
