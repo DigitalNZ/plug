@@ -1,3 +1,14 @@
 .row
   .columns
-    Home
+    .plugs
+      .plugs__header.clearfix
+        .row
+          .columns
+            %h5 Your plugs      
+          .columns
+            .text-right
+              = link_to 'Create a plug', '', class: 'button small studio strong new-plug-link'
+              = render partial: 'plugs/new_plug_modal'
+
+      .plugs__content
+        = render partial: 'plugs/plug', collection: @plugs

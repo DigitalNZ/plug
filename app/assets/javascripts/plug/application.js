@@ -11,8 +11,14 @@
 // about supported directives.
 //
 //= require jquery
+//= require rails-ujs
 //= require foundation
 
 $(function() { 
   $(document).foundation(); 
+
+  $('.new-plug-link').on('click', function(e) {
+    $('#new_plug_modal').foundation('open');
+    e.preventDefault();
+  });
 });

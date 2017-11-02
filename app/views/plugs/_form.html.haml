@@ -1,0 +1,12 @@
+= form_for(plug, remote: true) do |f|
+  .row
+    .column
+      = f.label :name
+      = f.text_field :name
+
+  .row
+    .column
+      = f.label :description
+      = f.text_field :description
+
+  = f.submit 'Save', class: 'button studio small'

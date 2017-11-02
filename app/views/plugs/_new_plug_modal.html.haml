@@ -1,0 +1,8 @@
+#new_plug_modal.reveal.new-plug-modal{ 'data-reveal' => '' }
+  %button.close-button{ 'aria-label' => 'Close', 'data-close' => '', type: 'button' }
+    %span{ 'aria-hidden' => 'true' } &#215;
+
+  .row.align-center
+    .column.align-self-middle
+      %h5 Create a plug
+      = render partial: 'plugs/form', locals: { plug: ::Plug::Plug.new }

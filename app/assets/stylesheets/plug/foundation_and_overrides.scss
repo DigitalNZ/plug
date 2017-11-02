@@ -3,6 +3,10 @@
 @import 'settings';
 @import 'foundation';
 
+// 1. Global
+// ---------
+$body-background: $alabaster;
+
 // If you'd like to include motion-ui the foundation-rails gem comes prepackaged with it, uncomment the 3 @imports, if you are not using the gem you need to install the motion-ui sass package.
 //
 // @import 'motion-ui/motion-ui';
@@ -40,7 +44,7 @@
 // @include foundation-progress-bar;
 // @include foundation-slider;
 // @include foundation-sticky;
-// @include foundation-reveal;
+@include foundation-reveal;
 @include foundation-switch;
 @include foundation-table;
 // @include foundation-tabs;

@@ -1,0 +1,3 @@
+$('.plugs__content').html('');
+$('.plugs__content').html("<%= j render partial: 'plugs/plug', collection: @plugs %>");
+$('#new_plug_modal').foundation('close');
