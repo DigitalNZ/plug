@@ -1,0 +1,6 @@
+.nav {
+  @include element('logo') {
+    color: $studio;
+    font-weight: 700;
+  }
+}
