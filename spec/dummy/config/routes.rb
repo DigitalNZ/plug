@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Plug::Engine => "/plug"
+  mount Plug::Engine => '/plug'
 end
