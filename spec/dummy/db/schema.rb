@@ -12,11 +12,12 @@
 
 ActiveRecord::Schema.define(version: 20171207020316) do
 
-  create_table 'plug_features', force: :cascade do |t|
-    t.string 'name'
-    t.string 'description'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "plug_features", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
