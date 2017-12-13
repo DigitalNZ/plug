@@ -7,6 +7,9 @@ module Plug
                      uniqueness: { message: 'Feature name must be unique', case_sensitive: false }
     validates :state, presence: { message: 'Feature state is required' }
 
+    # Callbacks
+    before_save { self.slug = name.parameterize }
+
     # States
     aasm column: :state do
       state :enabled, initial: true
