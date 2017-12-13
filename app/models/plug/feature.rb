@@ -10,6 +10,9 @@ module Plug
     # Callbacks
     before_save { self.slug = name.parameterize }
 
+    # Scopes
+    scope :slug_and_name, ->(arg) { where('slug = ? OR name = ?', arg, arg) }
+
     # States
     aasm column: :state do
       state :enabled, initial: true

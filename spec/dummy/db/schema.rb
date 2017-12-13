@@ -12,15 +12,15 @@
 
 ActiveRecord::Schema.define(version: 20171207020316) do
 
-  create_table "plug_features", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "slug"
-    t.string "state"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_plug_features_on_name"
-    t.index ["slug"], name: "index_plug_features_on_slug"
+  create_table 'plug_features', force: :cascade do |t|
+    t.string 'name'
+    t.string 'description'
+    t.string 'slug'
+    t.string 'state'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['name'], name: 'index_plug_features_on_name'
+    t.index ['slug'], name: 'index_plug_features_on_slug'
   end
 
 end

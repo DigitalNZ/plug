@@ -32,10 +32,20 @@ module Plug
       end
     end
 
-    context 'slug' do
+    context 'callbacks' do
       it 'generates a slug' do
         feature = create(:feature, name: 'Most awesome feature')
+
         expect(feature.slug).to eq 'most-awesome-feature'
+      end
+    end
+
+    context 'scopes' do
+      it 'finds by slug or name' do
+        feature = create(:feature, name: 'Session')
+
+        expect(described_class.slug_and_name('session').first).to eq feature
+        expect(described_class.slug_and_name('Session').first).to eq feature
       end
     end
   end
