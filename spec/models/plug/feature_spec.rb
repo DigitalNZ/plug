@@ -31,5 +31,12 @@ module Plug
         expect(feature).to transition_from(:disabled).to(:enabled).on_event(:enable)
       end
     end
+
+    context 'slug' do
+      it 'generates a slug' do
+        feature = create(:feature, name: 'Most awesome feature')
+        expect(feature.slug).to eq 'most-awesome-feature'
+      end
+    end
   end
 end

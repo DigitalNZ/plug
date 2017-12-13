@@ -5,6 +5,7 @@
     %tr
       %th Name
       %th Description
+      %th Slug
       %th State
       %th
       %th
@@ -15,6 +16,7 @@
       %tr
         %td= feature.name
         %td= feature.description
+        %td= feature.slug
         %td= feature.state
         %td= link_to 'Show', feature
         %td= link_to 'Edit', edit_feature_path(feature)
