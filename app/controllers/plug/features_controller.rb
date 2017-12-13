@@ -56,7 +56,7 @@ module Plug
 
       # Only allow a trusted parameter "white list" through.
       def feature_params
-        params.require(:feature).permit(:name, :description)
+        params.require(:feature).permit(:name, :description, :state)
       end
   end
 end

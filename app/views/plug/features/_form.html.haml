@@ -11,6 +11,9 @@
     = f.text_field :name
   .field
     = f.label :description
-    = f.text_field :description
+    = f.text_area :description, rows: 5
+  .field
+    = f.label :state
+    = f.select :state, ['enabled', 'disabled']
   .actions
     = f.submit 'Save'
