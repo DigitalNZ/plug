@@ -1,7 +1,9 @@
-%h1 Editing feature
+.row
+  .column
+    %h4 Editing feature
 
-= render 'form'
+    = render 'form'
 
-= link_to 'Show', @feature
-\|
-= link_to 'Back', features_path
+    = link_to 'Show', @feature, class: 'button'
+    \|
+    = link_to 'Back', features_path, class: 'button'
