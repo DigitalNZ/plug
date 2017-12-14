@@ -3,9 +3,8 @@
   = render 'plug/shared/head'
 
   %body
-    = render 'plug/shared/nav'
-
     .container
+      = render 'plug/shared/nav'
       = yield
 
     /= render 'shared/footer'

@@ -13,10 +13,12 @@
  *= require_self
  */
 
-@import 'scaffolds';
+@import 'normalize';
+@import 'milligram';
 
 // Variables
 @import 'variables/colors';
+@import 'variables/typography';
 
 // Third-party
 // If you need foundation and font-awesome, uncomment the line in gemspec
