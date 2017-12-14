@@ -5,7 +5,7 @@ module Plug
     if Rails.version.to_i < 5
       before_filter :set_feature, only: [:show, :edit, :update, :destroy]
     else
-      before_action :set_feature, only: [:show, :edit, :update, :destroy] 
+      before_action :set_feature, only: [:show, :edit, :update, :destroy]
     end
 
     # GET /features

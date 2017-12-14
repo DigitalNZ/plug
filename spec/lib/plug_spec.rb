@@ -8,7 +8,7 @@ RSpec.describe Plug do
       it 'returns true by slug' do
         expect(Plug.enabled?('map')).to eq true
       end
-      
+
       it 'returns true by name' do
         expect(Plug.enabled?('Map')).to eq true
       end
@@ -24,7 +24,7 @@ RSpec.describe Plug do
       it 'returns false by slug' do
         expect(Plug.enabled?('map')).to eq false
       end
-      
+
       it 'returns false by name' do
         expect(Plug.enabled?('Map')).to eq false
       end
