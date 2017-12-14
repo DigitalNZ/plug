@@ -1,4 +1,4 @@
-class CreatePlugFeatures < ActiveRecord::Migration[5.1]
+class CreatePlugFeatures < ActiveRecord::Migration
   def change
     create_table :plug_features do |t|
       t.string :name
