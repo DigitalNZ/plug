@@ -1,7 +1,9 @@
 require 'plug/engine'
+require 'plug/configuration'
 
 module Plug
   extend self
+  extend Configuration
 
   def enabled?(arg)
     arg = arg.to_s if arg.is_a? Symbol
