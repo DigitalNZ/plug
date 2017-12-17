@@ -7,11 +7,11 @@ require 'plug/version'
 Gem::Specification.new do |s|
   s.name        = 'plug'
   s.version     = Plug::VERSION
-  s.authors     = ['Ben']
-  s.email       = ['benedict@boost.co.nz']
+  s.authors     = ['Ben', 'Boost']
+  s.email       = ['benedict@boost.co.nz', 'info@boost.co.nz']
   s.homepage    = 'https://github.com/hapiben/plug'
-  s.summary     = 'Feature flipper'
-  s.description = 'Feature flipper'
+  s.summary     = 'Rails engine that can plug/unplug features'
+  s.description = 'Rails engine that can plug/unplug features with notice (WIP)'
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
