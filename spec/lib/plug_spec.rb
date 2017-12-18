@@ -16,6 +16,10 @@ RSpec.describe Plug do
       it 'returns true by symbol' do
         expect(Plug.enabled?(:map)).to eq true
       end
+
+      it 'returns true if feature not found' do
+        expect(Plug.enabled?(:random)).to eq true
+      end
     end
 
     context 'disabled' do
