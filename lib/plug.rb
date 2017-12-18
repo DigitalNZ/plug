@@ -1,5 +1,6 @@
 require 'plug/engine'
 require 'plug/configuration'
+require 'plug/constraint'
 
 module Plug
   extend self
