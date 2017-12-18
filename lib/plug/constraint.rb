@@ -6,6 +6,8 @@ module Plug
 
     def matches?(request)
       Plug.enabled?(@feature)
+    rescue
+      true
     end
   end
 end
