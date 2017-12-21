@@ -22,6 +22,8 @@
             %td= feature.state
             %td= link_to 'Show', feature
             %td= link_to 'Edit', edit_feature_path(feature)
-            %td= link_to 'Destroy', feature, method: :delete, data: { confirm: 'Are you sure?' }
+
+            - if Plug.allow_delete
+              %td= link_to 'Destroy', feature, method: :delete, data: { confirm: 'Are you sure?' }
 
     = link_to 'New Feature', new_feature_path, class: 'button'

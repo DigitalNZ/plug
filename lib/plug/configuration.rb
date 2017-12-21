@@ -2,10 +2,12 @@ module Plug
   module Configuration
     AUTH_USER         = ''
     AUTH_PASSWORD     = ''
+    ALLOW_DELETE      = true
 
     VALID_OPTIONS_KEYS = [
       :auth_user,
-      :auth_password
+      :auth_password,
+      :allow_delete
     ].freeze
 
     attr_accessor *VALID_OPTIONS_KEYS
