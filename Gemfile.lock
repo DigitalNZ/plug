@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    plug (0.1.7)
+    plug (0.1.8)
       aasm
       haml-rails
       jquery-rails
