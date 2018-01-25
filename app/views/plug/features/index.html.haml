@@ -23,7 +23,11 @@
             %td= link_to feature.name, edit_feature_path(feature), class: 'strong'
             %td= feature.description
             %td= feature.slug
-            %td= feature.state
+            %td
+              - if feature.state == 'enabled'
+                %i.fas.fa-check-circle.fa-2x.state__enabled
+              - else
+                %i.fas.fa-times-circle.fa-2x.state__disabled
 
             - if Plug.allow_delete
               %td= link_to 'Destroy', feature, method: :delete, data: { confirm: 'Are you sure?' }
