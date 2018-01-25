@@ -1,6 +1,13 @@
 .row
   .column
-    %h4 Features
+    - if notice
+      %p.notice= notice
+
+    .clearfix
+      .float-left
+        %h4 Features
+      .float-right
+        = link_to 'New Feature', new_feature_path, class: 'button'
 
     %table
       %thead
@@ -9,21 +16,16 @@
           %th Description
           %th Slug
           %th State
-          %th
-          %th
-          %th
 
       %tbody
         - @features.each do |feature|
           %tr
-            %td= feature.name
+            %td= link_to feature.name, edit_feature_path(feature), class: 'strong'
             %td= feature.description
             %td= feature.slug
             %td= feature.state
-            %td= link_to 'Show', feature
-            %td= link_to 'Edit', edit_feature_path(feature)
 
             - if Plug.allow_delete
               %td= link_to 'Destroy', feature, method: :delete, data: { confirm: 'Are you sure?' }
 
-    = link_to 'New Feature', new_feature_path, class: 'button'
+    

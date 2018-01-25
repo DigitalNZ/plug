@@ -15,5 +15,8 @@
   .field
     = f.label :state
     = f.select :state, ['enabled', 'disabled']
-  .actions
-    = f.submit 'Save'
+  .actions.clearfix
+    .float-left
+      = link_to 'Back', features_path, class: 'button'
+    .float-right
+      = f.submit 'Save'
