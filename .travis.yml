@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+  - 2.4.2
+cache: bundler
+bundler_args: --without production
+sudo: false
+script: support/ci.sh
+
+addons:
+  code_climate:
+    repo_token:
+      secure: CODE_CLIMATE_API_KEY
