@@ -55,6 +55,38 @@ Rails.application.routes.draw do
 end
 ```
 
+Notices can be displayed using the `Plug.notice` method.
+
+```erb
+<%= Plug.notice('my-awesome-feature-slug') %>
+```
+
+If you have custom HTML for notice, you can pass a block.
+
+
+```erb
+<% Plug.notice('my-awesome-feature-slug') do |notice| %>
+  <div class="alert">
+    <p><%= notice %></p>
+  </div>
+<% end %>
+```
+
+### Running the tests
+
+```bash
+→ bundle exec rspec spec
+```
+
+### Publishing to `rubygems.org`
+
+Make sure to bump the version. Rubygems don't accept version overrides.
+
+```bash
+→ gem build plug.gemspec
+→ gem push plug-<version>.gem
+```
+
 ### Questions/Issues?
 
 File a new [issue](https://github.com/boost/plug/issues/new) if you have questions or issues.
