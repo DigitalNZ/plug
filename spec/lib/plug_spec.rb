@@ -39,30 +39,21 @@ RSpec.describe Plug do
     end
   end
 
-  describe '.disabled?' do
-    let!(:feature) { create(:feature, name: 'Map') }
-
-    it 'returns true if feature is disabled' do
-      feature.disable!
-      expect(Plug.disabled?('map')).to eq true
-    end
-  end
-
   describe '.notice' do
     let!(:feature) { create(:feature, name: 'Map', notice: 'The Map is not available') }
 
     context 'enabled feature' do
-      it 'yields the notice' do
+      it 'returns nil' do
         expect(Plug.notice('map')).to eq nil
       end
     end
-    
+
     context 'disabled feature' do
       before do
         feature.disable!
       end
 
-      it 'does not yield the notice' do
+      it 'returns the notice' do
         expect(Plug.notice('map')).to eq 'The Map is not available'
       end
 
