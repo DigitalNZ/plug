@@ -26,9 +26,7 @@ module Plug
   def notice(arg, &block)
     feature = get_feature(arg)
 
-    return if feature.enabled? || feature.notice.nil?
-
-    render_notice(feature.notice, &block)
+    render_notice(feature.notice, &block) unless feature.enabled? || feature.notice.blank?
   rescue
     return nil
   end
@@ -42,10 +40,8 @@ module Plug
     end
 
     def render_notice(notice, &block)
-      if block_given?
-        yield(notice)
-      else
-        return notice
-      end
+      return notice unless block_given?
+
+      yield(notice)
     end
 end
