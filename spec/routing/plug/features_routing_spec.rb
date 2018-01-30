@@ -14,7 +14,7 @@ module Plug
       end
 
       it 'routes to #show' do
-        expect(get: '/features/1').to route_to('plug/features#show', id: '1')
+        expect(get: '/features/1').to_not be_routable
       end
 
       it 'routes to #edit' do

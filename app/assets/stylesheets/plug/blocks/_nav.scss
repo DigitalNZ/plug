@@ -1,4 +1,7 @@
 .nav {
+  border-bottom: 1px solid $gallery;
+  margin-bottom: 2rem;
+
   @include element('logo') {
     color: $studio;
     font-weight: 700;

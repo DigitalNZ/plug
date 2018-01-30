@@ -18,12 +18,13 @@ module Plug
       end
     end
 
-    describe 'GET #show' do
-      it 'returns a success response' do
-        get :show, params: { id: feature.to_param }
-        expect(response).to be_success
-      end
-    end
+    # We don't want this for now
+    # describe 'GET #show' do
+    #   it 'returns a success response' do
+    #     get :show, params: { id: feature.to_param }
+    #     expect(response).to be_success
+    #   end
+    # end
 
     describe 'GET #new' do
       it 'returns a success response' do
@@ -49,7 +50,7 @@ module Plug
 
         it 'redirects to the created feature' do
           post :create, params: { feature: valid_attributes }
-          expect(response).to redirect_to(Feature.last)
+          expect(response).to redirect_to(features_path)
         end
       end
 
@@ -73,7 +74,7 @@ module Plug
 
         it 'redirects to the feature' do
           put :update, params: { id: feature.to_param, feature: valid_attributes }
-          expect(response).to redirect_to(feature)
+          expect(response).to redirect_to(features_path)
         end
       end
 

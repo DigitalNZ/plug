@@ -1,0 +1,9 @@
+.state {
+  @include element('enabled') {
+    color: $jungle-green;
+  }
+
+  @include element('disabled') {
+    color: $tall-poppy;
+  }
+}

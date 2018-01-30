@@ -13,7 +13,13 @@
     = f.label :description
     = f.text_area :description, rows: 5
   .field
+    = f.label :notice
+    = f.text_area :notice, rows: 10
+  .field
     = f.label :state
     = f.select :state, ['enabled', 'disabled']
-  .actions
-    = f.submit 'Save'
+  .actions.clearfix
+    .float-left
+      = link_to 'Back', features_path, class: 'button'
+    .float-right
+      = f.submit 'Save'
