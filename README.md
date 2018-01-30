@@ -1,4 +1,4 @@
-# Plug [![Maintainability](https://api.codeclimate.com/v1/badges/4fcaa64bca3b7152487d/maintainability)](https://codeclimate.com/github/boost/plug/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/4fcaa64bca3b7152487d/test_coverage)](https://codeclimate.com/github/boost/plug/test_coverage) [![Build Status](https://travis-ci.org/boost/plug.svg?branch=master)](https://travis-ci.org/boost/plug)
+# Plug [![Maintainability](https://api.codeclimate.com/v1/badges/6246b1cd8e42603c42f6/maintainability)](https://codeclimate.com/github/DigitalNZ/plug/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/6246b1cd8e42603c42f6/test_coverage)](https://codeclimate.com/github/DigitalNZ/plug/test_coverage) [![Build Status](https://travis-ci.org/DigitalNZ/plug.svg?branch=master)](https://travis-ci.org/DigitalNZ/plug)
 
 A Rails engine to turn on/off features (Feature flipper).
 
