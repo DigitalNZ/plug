@@ -6,7 +6,7 @@ A Rails engine to turn on/off features (Feature flipper).
 
 - Supports Rails 3 and above
 - MySQL
-- Set notices (WIP)
+- Set notices
 
 ### Prerequisites
 
@@ -86,6 +86,15 @@ Make sure to bump the version. Rubygems don't accept version overrides.
 → gem build plug.gemspec
 → gem push plug-<version>.gem
 ```
+
+### TODOs
+
+- Ability to disable all features using one button
+- Add screenshot
+- Allow block parameters for `enabled?` method
+- Versioning of features
+- History of feature activities
+
 
 ### Questions/Issues?
 
