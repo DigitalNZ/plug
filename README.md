@@ -98,11 +98,11 @@ Make sure to bump the version. Rubygems don't accept version overrides.
 
 ### Questions/Issues?
 
-File a new [issue](https://github.com/boost/plug/issues/new) if you have questions or issues.
+File a new [issue](https://github.com/digitalnz/plug/issues/new) if you have questions or issues.
 
 ### Contributing
 
-1. Fork it ( https://github.com/boost/plug/fork )
+1. Fork it ( https://github.com/boost/digitalnz/fork )
 2. Create your feature branch (`git checkout -b my-awesome-feature`)
 3. Commit your changes (`git commit -am 'Add my awesome feature!'`)
 4. Push to the branch (`git push origin my-awesome-feature`)
