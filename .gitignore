@@ -8,3 +8,4 @@ spec/dummy/tmp/
 /spec/examples.txt
 .DS_Store
 *.gem
+/coverage
