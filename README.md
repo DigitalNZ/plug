@@ -72,6 +72,15 @@ If you have custom HTML for notice, you can pass a block.
 <% end %>
 ```
 
+#### Buttons
+Add buttons to the config block to perform rake tasks from the plug dashboard
+
+```ruby
+  config.buttons = [
+    { label: 'Clear cache', task: 'tmp:cache:clear' }
+  ]
+```
+
 ### Running the tests
 
 ```bash

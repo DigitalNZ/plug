@@ -2,6 +2,13 @@
   .column
     - if notice
       %p.notice= notice
+    .row
+      .column
+        - Plug.buttons.each do |button|
+          .task-button
+            = form_tag('/plug/task') do
+              = hidden_field_tag(:task, button[:task])
+              = submit_tag(button[:label])
 
     .clearfix
       .float-left

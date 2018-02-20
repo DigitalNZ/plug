@@ -7,7 +7,8 @@ module Plug
     VALID_OPTIONS_KEYS = [
       :auth_user,
       :auth_password,
-      :allow_delete
+      :allow_delete,
+      :buttons
     ].freeze
 
     attr_accessor *VALID_OPTIONS_KEYS
