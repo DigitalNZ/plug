@@ -1,7 +1,11 @@
 .row
   .column
     - if notice
-      %p.notice= notice
+      %p.notice= sanitize(notice)
+
+    - if alert
+      %p.alert= sanitize(alert)
+
     .row
       .column
         - Plug.buttons.each do |button|

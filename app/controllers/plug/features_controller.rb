@@ -58,7 +58,7 @@ module Plug
         Rails.application.load_tasks
         ::Rake::Task[params[:task]].execute
       rescue StandardError => e
-        flash[:notice] = e.message
+        flash[:alert] = e.message
       else
         flash[:notice] = "Task: #{params[:task]} has completed"
       end
