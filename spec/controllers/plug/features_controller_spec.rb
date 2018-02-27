@@ -101,5 +101,26 @@ module Plug
       end
     end
 
+    describe 'POST #task_execution' do
+      let(:task) { 'tmp:cache:clear' }
+      it 'executes a rake task' do
+        expect(::Rake::Task[task]).to receive(:execute)
+        post :task_execution, params: { task: task }
+      end
+
+      it 'redirects to plug root path' do
+        expect(post :task_execution, params: { task: task }).to redirect_to root_path
+      end
+
+      it 'sets a flash notice when the job was successful' do
+        post :task_execution, params: { task: 'tmp:cache:clear' }
+        expect(flash[:notice]).to eq "Task: #{task} has completed"
+      end
+
+      it 'sets a flash alert when the job was NOT successful' do
+        post :task_execution, params: { task: 'not:a:valid:task' }
+        expect(flash[:alert]).to eq "Don't know how to build task 'not:a:valid:task' (see --tasks)"
+      end
+    end
   end
 end
