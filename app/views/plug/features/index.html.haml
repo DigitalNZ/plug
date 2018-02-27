@@ -8,11 +8,7 @@
 
     .row
       .column
-        - Plug.buttons.each do |button|
-          .task-button
-            = form_tag('/plug/task') do
-              = hidden_field_tag(:task, button[:task])
-              = submit_tag(button[:label])
+        = render partial: 'task', collection: Plug.buttons
 
     .clearfix
       .float-left
