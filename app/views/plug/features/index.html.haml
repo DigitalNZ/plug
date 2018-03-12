@@ -1,7 +1,14 @@
 .row
   .column
     - if notice
-      %p.notice= notice
+      %p.notice= sanitize(notice)
+
+    - if alert
+      %p.alert= sanitize(alert)
+
+    .row
+      .column
+        = render partial: 'task', collection: Plug.buttons
 
     .clearfix
       .float-left

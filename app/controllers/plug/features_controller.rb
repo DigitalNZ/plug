@@ -50,6 +50,22 @@ module Plug
       redirect_to features_url, notice: 'Feature was successfully destroyed.'
     end
 
+    # POST /task
+    def task_execution
+      begin
+        require 'rake'
+
+        Rails.application.load_tasks
+        ::Rake::Task[params[:task]].execute
+      rescue StandardError => e
+        flash[:alert] = e.message
+      else
+        flash[:notice] = "Task: #{params[:task]} has completed"
+      end
+
+      redirect_to root_path
+    end
+
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_feature
