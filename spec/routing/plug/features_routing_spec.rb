@@ -36,6 +36,10 @@ module Plug
       it 'routes to #destroy' do
         expect(delete: '/features/1').to route_to('plug/features#destroy', id: '1')
       end
+
+      it 'routes to #task_execution' do
+        expect(post: '/task').to route_to('plug/features#task_execution')
+      end
     end
   end
 end
