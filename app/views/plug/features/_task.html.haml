@@ -1,0 +1,4 @@
+.task-button
+  = form_tag(task_execution_path) do
+    = hidden_field_tag(:task, task[:task])
+    = submit_tag(task[:label])
