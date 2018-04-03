@@ -1,6 +1,9 @@
 %nav.clearfix.nav
-  .row
-    .column
-      %h3
-        = link_to 'Plug', plug.root_path, class: 'nav__logo'
-        %small /unplug features
+  .float-left
+    %h3
+      = link_to 'Plug', plug.root_path, class: 'nav__logo'
+      %small /unplug features
+  .float-right
+    %ul.menu
+      %li= link_to 'Features', plug.root_path
+      %li= link_to 'Site Notices', plug.site_notices_path

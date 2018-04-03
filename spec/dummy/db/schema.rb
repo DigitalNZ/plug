@@ -10,18 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180128202026) do
+ActiveRecord::Schema.define(version: 20180403024712) do
 
-  create_table 'plug_features', force: :cascade do |t|
-    t.string 'name'
-    t.string 'description'
-    t.string 'slug'
-    t.string 'state'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.text 'notice'
-    t.index ['name'], name: 'index_plug_features_on_name'
-    t.index ['slug'], name: 'index_plug_features_on_slug'
+  create_table "plug_features", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "slug"
+    t.string "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "notice"
+    t.index ["name"], name: "index_plug_features_on_name"
+    t.index ["slug"], name: "index_plug_features_on_slug"
+  end
+
+  create_table "plug_site_notices", force: :cascade do |t|
+    t.string "name"
+    t.string "slug"
+    t.text "notice"
+    t.string "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_plug_site_notices_on_name"
+    t.index ["slug"], name: "index_plug_site_notices_on_slug"
   end
 
 end

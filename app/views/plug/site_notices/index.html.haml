@@ -6,21 +6,17 @@
     - if alert
       %p.alert= sanitize(alert)
 
-    .row
-      .column
-        = render partial: 'task', collection: Plug.buttons
-
     .clearfix
       .float-left
-        %h4 Features
+        %h4 Site Notices
       .float-right
-        = link_to 'New Feature', new_feature_path, class: 'button'
+        = link_to 'New Site Notice', new_site_notice_path, class: 'button'
 
     %table
       %thead
         %tr
           %th Name
-          %th Description
+          %th Notice
           %th Slug
           %th State
           
@@ -28,18 +24,18 @@
             %th Actions
 
       %tbody
-        - @features.each do |feature|
+        - @site_notices.each do |site_notice|
           %tr
-            %td= link_to feature.name, edit_feature_path(feature), class: 'strong'
-            %td= feature.description
-            %td= feature.slug
+            %td= link_to site_notice.name, edit_site_notice_path(site_notice), class: 'strong'
+            %td= site_notice.notice
+            %td= site_notice.slug
             %td
-              - if feature.state == 'enabled'
+              - if site_notice.state == 'enabled'
                 %i.fas.fa-check-circle.fa-2x.state__enabled
               - else
                 %i.fas.fa-times-circle.fa-2x.state__disabled
 
             - if Plug.allow_delete
-              %td= link_to 'Destroy', feature, method: :delete, data: { confirm: 'Are you sure?' }
+              %td= link_to 'Destroy', site_notice, method: :delete, data: { confirm: 'Are you sure?' }
 
     

@@ -81,6 +81,15 @@ Add buttons to the config block to perform rake tasks from the plug dashboard
   ]
 ```
 
+### Creating new migrations
+
+```bash
+→ rails g migration MyAwesomeMigration
+→ rails g model MyModel name:string slug:string:index
+→ rails db:migrate
+→ rails db:migrate RAILS_ENV=test
+```
+
 ### Running the tests
 
 ```bash
