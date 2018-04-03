@@ -12,7 +12,7 @@ module Plug
       it 'does not route to #show' do
         expect(get: '/site_notices/my-slug').to_not be_routable
       end
-      
+
       it 'routes to #new' do
         expect(get: '/site_notices/new').to route_to('plug/site_notices#new')
       end

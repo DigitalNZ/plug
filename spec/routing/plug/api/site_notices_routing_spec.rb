@@ -13,7 +13,7 @@ module Plug
         it 'routes to #show' do
           expect(get: '/api/site_notices/my-slug').to route_to('plug/api/site_notices#show', slug: 'my-slug', format: :json)
         end
-        
+
         it 'does not route to #new' do
           expect(get: '/api/site_notices/new').to_not route_to('plug/api/site_notices#new', format: :json)
         end

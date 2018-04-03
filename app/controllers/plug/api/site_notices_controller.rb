@@ -13,7 +13,7 @@ module Plug
       # GET /site_notices/slug.json
       def show
         @site_notice = SiteNotice.slug_and_name(params[:slug]).first
-        
+
         render json: @site_notice
       end
     end
