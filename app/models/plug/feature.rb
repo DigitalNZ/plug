@@ -1,6 +1,6 @@
 module Plug
   class Feature < ApplicationRecord
     include AASM
-    include Concerns::ModelHelpers
+    include Plug::Concerns::ModelHelpers
   end
 end

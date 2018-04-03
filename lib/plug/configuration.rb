@@ -8,7 +8,8 @@ module Plug
       :auth_user,
       :auth_password,
       :allow_delete,
-      :buttons
+      :buttons,
+      :api_path
     ].freeze
 
     attr_accessor *VALID_OPTIONS_KEYS

@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'jquery-rails'
   s.add_dependency 'haml-rails'
   s.add_dependency 'aasm'
+  s.add_dependency 'activeresource'
 
   # We don't need these for now
   # s.add_dependency 'jquery-rails'

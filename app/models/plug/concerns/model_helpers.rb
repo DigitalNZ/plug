@@ -35,7 +35,7 @@ module Plug
 
       end
 
-      class_methods do
+      module ClassMethods
         def humanized_class_name
           self.name.demodulize.underscore.humanize.capitalize
         end
