@@ -3,8 +3,8 @@ require 'rails_helper'
 module Plug
   RSpec.describe SiteNotice, type: :model do
     context 'validations' do
-      it { should validate_presence_of(:name).with_message('Site Notice name is required') }
-      it { should validate_presence_of(:state).with_message('Site Notice state is required') }
+      it { should validate_presence_of(:name).with_message('Site notice name is required') }
+      it { should validate_presence_of(:state).with_message('Site notice state is required') }
 
       # For some reason, shoulda-matchers can't validate uniqueness with message. :(
       it 'validates uniqueness' do
@@ -12,7 +12,7 @@ module Plug
         duplicate_site_notice = build(:site_notice, name: 'Unique')
         duplicate_site_notice.valid?
 
-        expect(duplicate_site_notice.errors.messages[:name].first).to eq 'Site Notice name must be unique'
+        expect(duplicate_site_notice.errors.messages[:name].first).to eq 'Site notice name must be unique'
       end
     end
 
