@@ -1,15 +1,15 @@
+- if notice
+  %p.notice= sanitize(notice)
+
+- if alert
+  %p.alert= sanitize(alert)
+
 .row
   .column
-    - if notice
-      %p.notice= sanitize(notice)
+    = render partial: 'task', collection: Plug.buttons
 
-    - if alert
-      %p.alert= sanitize(alert)
-
-    .row
-      .column
-        = render partial: 'task', collection: Plug.buttons
-
+.row
+  .column
     .clearfix
       .float-left
         %h4 Features
