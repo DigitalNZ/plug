@@ -13,16 +13,26 @@ module Plug
       let(:site_notice) { create(:site_notice) }
 
       describe 'GET #index' do
+        before { get :index, params: {} }
+
         it 'returns a success response' do
-          get :index, params: {}
           expect(response).to be_success
+        end
+
+        it 'returns response json format' do
+          expect(response.header['Content-Type']).to include 'application/json'
         end
       end
 
       describe 'GET #show' do
+        before { get :show, params: { slug: site_notice.slug } }
+        
         it 'returns a success response' do
-          get :show, params: { slug: site_notice.slug }
           expect(response).to be_success
+        end
+
+        it 'returns response json format' do
+          expect(response.header['Content-Type']).to include 'application/json'
         end
       end
     end
