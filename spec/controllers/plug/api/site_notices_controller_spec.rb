@@ -26,7 +26,7 @@ module Plug
 
       describe 'GET #show' do
         before { get :show, params: { slug: site_notice.slug } }
-        
+
         it 'returns a success response' do
           expect(response).to be_success
         end

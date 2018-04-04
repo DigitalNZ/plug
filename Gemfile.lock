@@ -6,7 +6,7 @@ PATH
       activeresource
       haml-rails
       jquery-rails
-      rails (<= 5.1.6)
+      rails
       sass-rails
 
 GEM
