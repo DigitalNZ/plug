@@ -1,5 +1,5 @@
 module Plug
-  class Feature < ApplicationRecord
+  class SiteNotice < ApplicationRecord
     include AASM
     include Plug::Concerns::ModelHelpers
   end

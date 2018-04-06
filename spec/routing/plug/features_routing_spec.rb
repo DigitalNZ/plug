@@ -13,7 +13,7 @@ module Plug
         expect(get: '/features/new').to route_to('plug/features#new')
       end
 
-      it 'routes to #show' do
+      it 'does not route to #show' do
         expect(get: '/features/1').to_not be_routable
       end
 

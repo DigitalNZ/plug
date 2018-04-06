@@ -1,0 +1,22 @@
+= form_for @site_notice do |f|
+  - if @site_notice.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@site_notice.errors.count, "error")} prohibited this feature from being saved:"
+      %ul
+        - @site_notice.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :notice
+    = f.text_area :notice, rows: 10
+  .field
+    = f.label :state
+    = f.select :state, ['enabled', 'disabled']
+  .actions.clearfix
+    .float-left
+      = link_to 'Back', site_notices_path, class: 'button'
+    .float-right
+      = f.submit 'Save'

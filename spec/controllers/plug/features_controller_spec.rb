@@ -103,8 +103,13 @@ module Plug
 
     describe 'POST #task_execution' do
       let(:task) { 'tmp:cache:clear' }
+
+      before do
+        require 'rake'
+      end
+
       it 'executes a rake task' do
-        expect(::Rake::Task[task]).to receive(:execute)
+        expect(::Rake::Task[task]).to receive(:execute) { nil }
         post :task_execution, params: { task: task }
       end
 

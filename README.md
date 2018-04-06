@@ -32,6 +32,7 @@ And run the install generator:
 ```bash
 → rails g plug:install
 → rails g plug:install:migrations
+→ rake plug:install:migrations # For Rails <= 3.x
 → rails db:migrate # Newer version of Rails
 → rake db:migrate # Older version of Rails
 → rails s
@@ -79,6 +80,15 @@ Add buttons to the config block to perform rake tasks from the plug dashboard
   config.buttons = [
     { label: 'Clear cache', task: 'tmp:cache:clear' }
   ]
+```
+
+### Creating new migrations
+
+```bash
+→ rails g migration MyAwesomeMigration
+→ rails g model MyModel name:string slug:string:index
+→ rails db:migrate
+→ rails db:migrate RAILS_ENV=test
 ```
 
 ### Running the tests
