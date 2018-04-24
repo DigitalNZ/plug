@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180403024712) do
+ActiveRecord::Schema.define(version: 20180424015828) do
 
   create_table "plug_features", force: :cascade do |t|
     t.string "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20180403024712) do
     t.string "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "theme"
     t.index ["name"], name: "index_plug_site_notices_on_name"
     t.index ["slug"], name: "index_plug_site_notices_on_slug"
   end
