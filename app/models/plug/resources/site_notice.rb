@@ -10,6 +10,10 @@ module Plug
       def disabled?
         state == 'disabled'
       end
+
+      def icon
+        theme.split(';').last.split(':').last
+      end
     end
   end
 end
