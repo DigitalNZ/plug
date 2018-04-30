@@ -1,6 +1,8 @@
 module Plug
   module Resources
     class SiteNotice < ActiveResource::Base
+      include Plug::Concerns::Themeable
+
       self.site = Plug.api_path
 
       def enabled?

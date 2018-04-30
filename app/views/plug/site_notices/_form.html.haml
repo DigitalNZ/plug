@@ -15,6 +15,9 @@
   .field
     = f.label :state
     = f.select :state, ['enabled', 'disabled']
+  .field
+    = f.label :theme
+    = f.select :theme, Plug.themes.map { |theme| [theme[:name], "#{theme[:style].to_a.map { |s| s.join(':') }.join(';')}"] }
   .actions.clearfix
     .float-left
       = link_to 'Back', site_notices_path, class: 'button'

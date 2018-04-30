@@ -62,7 +62,7 @@ module Plug
         if Rails.version.to_i < 5
           ActiveSupport::HashWithIndifferentAccess.new(params[:site_notice])
         else
-          params.require(:site_notice).permit(:name, :notice, :state)
+          params.require(:site_notice).permit(:name, :notice, :state, :theme)
         end
       end
   end

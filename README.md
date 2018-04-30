@@ -89,6 +89,7 @@ Add buttons to the config block to perform rake tasks from the plug dashboard
 → rails g model MyModel name:string slug:string:index
 → rails db:migrate
 → rails db:migrate RAILS_ENV=test
+→ rake plug:install:migrations # Run this on the app to copy the new migrations
 ```
 
 ### Running the tests

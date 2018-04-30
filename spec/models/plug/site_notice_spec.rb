@@ -32,6 +32,22 @@ module Plug
       end
     end
 
+    context 'default theme' do
+      let(:site_notice) { build(:site_notice) }
+
+      it 'has returns info-circle' do
+        expect(site_notice.icon).to eq 'info-circle'
+      end
+    end
+
+    context 'survey theme' do
+      let(:site_notice) { build(:site_notice, :default) }
+
+      it 'has returns flag' do
+        expect(site_notice.icon).to eq 'flag'
+      end
+    end
+
     context 'callbacks' do
       it 'generates a slug' do
         site_notice = create(:site_notice, name: 'Most awesome site notice')
