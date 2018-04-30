@@ -1,6 +1,8 @@
 module Plug
   module Resources
     class SiteNotice < ActiveResource::Base
+      include Plug::Concerns::Themeable
+
       self.site = Plug.api_path
 
       def enabled?
@@ -9,10 +11,6 @@ module Plug
 
       def disabled?
         state == 'disabled'
-      end
-
-      def icon
-        theme.split(';').last.split(':').last
       end
     end
   end

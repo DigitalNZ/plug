@@ -35,7 +35,7 @@ module Plug
     context 'default theme' do
       let(:site_notice) { build(:site_notice) }
 
-      it 'has return flag' do
+      it 'has returns info-circle' do
         expect(site_notice.icon).to eq 'info-circle'
       end
     end
@@ -43,7 +43,7 @@ module Plug
     context 'survey theme' do
       let(:site_notice) { build(:site_notice, :default) }
 
-      it 'has return flag' do
+      it 'has returns flag' do
         expect(site_notice.icon).to eq 'flag'
       end
     end
