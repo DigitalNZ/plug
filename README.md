@@ -31,7 +31,7 @@ And run the install generator:
 
 ```bash
 → rails g plug:install
-→ rails g plug:install:migrations
+→ rails plug:install:migrations
 → rake plug:install:migrations # For Rails <= 3.x
 → rails db:migrate # Newer version of Rails
 → rake db:migrate # Older version of Rails
