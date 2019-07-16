@@ -64,12 +64,14 @@ module Plug
 
     describe 'PUT #update' do
       context 'with valid params' do
-        let(:new_attributes) { attributes_for(:feature, name: 'New feature') }
+        let(:new_attributes) { attributes_for(:feature, name: 'New feature', notice: 'New notice', description: 'New description') }
 
         it 'updates the requested feature' do
           put :update, params: { id: feature.to_param, feature: new_attributes }
           feature.reload
           expect(feature.name).to eq new_attributes[:name]
+          expect(feature.notice).to eq new_attributes[:notice]
+          expect(feature.description).to eq new_attributes[:description]
         end
 
         it 'redirects to the feature' do
