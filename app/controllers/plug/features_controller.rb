@@ -79,7 +79,7 @@ module Plug
         if Rails.version.to_i < 5
           ActiveSupport::HashWithIndifferentAccess.new(params[:feature])
         else
-          params.require(:feature).permit(:name, :description, :state)
+          params.require(:feature).permit(:name, :description, :state, :notice)
         end
       end
   end
