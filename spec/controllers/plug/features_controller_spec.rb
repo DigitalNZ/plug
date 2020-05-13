@@ -126,7 +126,7 @@ module Plug
 
       it 'sets a flash alert when the job was NOT successful' do
         post :task_execution, params: { task: 'not:a:valid:task' }
-        expect(flash[:alert]).to eq "Don't know how to build task 'not:a:valid:task' (see --tasks)"
+        expect(flash[:alert]).to eq "Don't know how to build task 'not:a:valid:task' (See the list of available tasks with `rake --tasks`)"
       end
     end
   end

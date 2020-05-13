@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.4.2
+  - 2.6.5
 cache: bundler
 bundler_args: --without production
 sudo: false
