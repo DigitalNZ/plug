@@ -1,4 +1,4 @@
-require "rails_helper"
+require 'rails_helper'
 
 module Plug
   module Api
@@ -12,27 +12,27 @@ module Plug
       let(:invalid_attributes) { attributes_for(:site_notice, :invalid) }
       let(:site_notice) { create(:site_notice) }
 
-      describe "GET #index" do
+      describe 'GET #index' do
         before { get :index, params: {} }
 
-        it "returns a success response" do
+        it 'returns a success response' do
           expect(response).to be_success
         end
 
-        it "returns response json format" do
-          expect(response.header["Content-Type"]).to include "application/json"
+        it 'returns response json format' do
+          expect(response.header['Content-Type']).to include 'application/json'
         end
       end
 
-      describe "GET #show" do
+      describe 'GET #show' do
         before { get :show, params: {slug: site_notice.slug} }
 
-        it "returns a success response" do
+        it 'returns a success response' do
           expect(response).to be_success
         end
 
-        it "returns response json format" do
-          expect(response.header["Content-Type"]).to include "application/json"
+        it 'returns response json format' do
+          expect(response.header['Content-Type']).to include 'application/json'
         end
       end
     end

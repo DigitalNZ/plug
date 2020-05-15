@@ -1,4 +1,4 @@
-require "active_support/concern"
+require 'active_support/concern'
 
 module Plug
   module Concerns
@@ -17,7 +17,7 @@ module Plug
         before_save { self.slug = name.parameterize }
 
         # Scopes
-        scope :slug_and_name, ->(arg) { where("slug = ? OR name = ?", arg, arg) }
+        scope :slug_and_name, ->(arg) { where('slug = ? OR name = ?', arg, arg) }
 
         # States
         aasm column: :state do

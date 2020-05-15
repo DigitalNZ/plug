@@ -1,4 +1,4 @@
-require_dependency "plug/application_controller"
+require_dependency 'plug/application_controller'
 
 module Plug
   class SiteNoticesController < ApplicationController
@@ -30,7 +30,7 @@ module Plug
       @site_notice = SiteNotice.new(site_notice_params)
 
       if @site_notice.save
-        redirect_to site_notices_path, notice: "Site Notice was successfully created."
+        redirect_to site_notices_path, notice: 'Site Notice was successfully created.'
       else
         render :new
       end
@@ -39,7 +39,7 @@ module Plug
     # PATCH/PUT /site_notices/1
     def update
       if @site_notice.update_attributes(site_notice_params)
-        redirect_to site_notices_path, notice: "Site Notice was successfully updated."
+        redirect_to site_notices_path, notice: 'Site Notice was successfully updated.'
       else
         render :edit
       end
@@ -48,7 +48,7 @@ module Plug
     # DELETE /site_notices/1
     def destroy
       @site_notice.destroy
-      redirect_to site_notices_url, notice: "Site Notice was successfully destroyed."
+      redirect_to site_notices_url, notice: 'Site Notice was successfully destroyed.'
     end
 
     private

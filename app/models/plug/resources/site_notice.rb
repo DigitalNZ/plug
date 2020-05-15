@@ -6,11 +6,11 @@ module Plug
       self.site = Plug.api_path
 
       def enabled?
-        state == "enabled"
+        state == 'enabled'
       end
 
       def disabled?
-        state == "disabled"
+        state == 'disabled'
       end
     end
   end

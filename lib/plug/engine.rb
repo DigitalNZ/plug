@@ -1,7 +1,7 @@
 # Require engine dependencies
-require "haml-rails"
-require "aasm"
-require "jquery-rails"
+require 'haml-rails'
+require 'aasm'
+require 'jquery-rails'
 
 module Plug
   class Engine < ::Rails::Engine

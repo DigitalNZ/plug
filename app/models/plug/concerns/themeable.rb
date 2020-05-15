@@ -1,4 +1,4 @@
-require "active_support/concern"
+require 'active_support/concern'
 
 module Plug
   module Concerns
@@ -7,7 +7,7 @@ module Plug
 
       included do
         def icon
-          theme.split(";").last.split(":").last
+          theme.split(';').last.split(':').last
         end
       end
     end

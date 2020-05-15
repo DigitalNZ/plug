@@ -1,4 +1,4 @@
-require_dependency "plug/application_controller"
+require_dependency 'plug/application_controller'
 
 module Plug
   class FeaturesController < ApplicationController
@@ -30,7 +30,7 @@ module Plug
       @feature = Feature.new(feature_params)
 
       if @feature.save
-        redirect_to features_path, notice: "Feature was successfully created."
+        redirect_to features_path, notice: 'Feature was successfully created.'
       else
         render :new
       end
@@ -39,7 +39,7 @@ module Plug
     # PATCH/PUT /features/1
     def update
       if @feature.update_attributes(feature_params)
-        redirect_to features_path, notice: "Feature was successfully updated."
+        redirect_to features_path, notice: 'Feature was successfully updated.'
       else
         render :edit
       end
@@ -48,7 +48,7 @@ module Plug
     # DELETE /features/1
     def destroy
       @feature.destroy
-      redirect_to features_url, notice: "Feature was successfully destroyed."
+      redirect_to features_url, notice: 'Feature was successfully destroyed.'
     end
 
     # POST /task

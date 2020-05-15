@@ -1,7 +1,7 @@
 module Plug
   module Configuration
-    AUTH_USER = ""
-    AUTH_PASSWORD = ""
+    AUTH_USER = ''
+    AUTH_PASSWORD = ''
     ALLOW_DELETE = true
 
     VALID_OPTIONS_KEYS = [

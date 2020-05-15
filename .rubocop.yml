@@ -1,6 +1,7 @@
 inherit_from:
   - .rubocop_todo.yml
   - .rubocop_strict.yml
+  - .rubocop_style.yml
 
 inherit_mode:
   merge:
