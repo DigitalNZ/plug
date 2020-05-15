@@ -54,10 +54,7 @@ module Plug
     # TODO: Move this to a separate controller e.g. `tasks_controller.rb`
     def task_execution
       begin
-        require 'rake'
-
-        Rails.application.load_tasks
-        ::Rake::Task[params[:task]].execute
+        Plug::TaskExecutionService.new(name: params[:task]).call
       rescue StandardError => e
         flash[:alert] = e.message
       else
