@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'plug/engine'
 require 'plug/configuration'
 require 'plug/constraint'
@@ -13,7 +15,7 @@ module Plug
   # @return [Boolean] true - Feature found and enabled | true - Feature not found (We don't want to block) | false - Feature was set to disabled
   def enabled?(arg)
     get_feature(arg).enabled?
-  rescue
+  rescue StandardError
     true
   end
 
@@ -27,21 +29,21 @@ module Plug
     feature = get_feature(arg)
 
     render_notice(feature.notice, &block) unless feature.enabled? || feature.notice.blank?
-  rescue
+  rescue StandardError
     nil
   end
 
   private
 
-  def get_feature(arg)
-    arg = arg.to_s if arg.is_a? Symbol
+    def get_feature(arg)
+      arg = arg.to_s if arg.is_a? Symbol
 
-    Plug::Feature.slug_and_name(arg).first
-  end
+      Plug::Feature.slug_and_name(arg).first
+    end
 
-  def render_notice(notice, &block)
-    return notice unless block_given?
+    def render_notice(notice)
+      return notice unless block_given?
 
-    yield(notice)
-  end
+      yield(notice)
+    end
 end

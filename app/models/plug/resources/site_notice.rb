@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Plug
   module Resources
     class SiteNotice < ActiveResource::Base

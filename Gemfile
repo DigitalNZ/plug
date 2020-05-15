@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 # Declare your gem's dependencies in plug.gemspec.
@@ -14,9 +16,5 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 group :development, :test do
-  gem 'rubocop', '~> 0.82.0', require: false
-  gem 'rubocop-performance', '~> 1.5.2', require: false
-  gem 'rubocop-rails', '~> 2.5.2', require: false
-  gem 'rubocop-rspec', '~> 1.39.0', require: false
-  gem 'standard', '~> 0.4.1'
+  gem 'boost-styles', git: 'https://github.com/boost/boost-styles.git'
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Require engine dependencies
 require 'haml-rails'
 require 'aasm'

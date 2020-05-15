@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Plug::Engine.routes.draw do
   root to: 'features#index'
 
@@ -7,7 +9,7 @@ Plug::Engine.routes.draw do
   # Site notices
   resources :site_notices, except: :show
 
-  namespace :api, defaults: {format: :json} do
+  namespace :api, defaults: { format: :json } do
     get '/site_notices/:slug', to: 'site_notices#show'
     get '/site_notices', to: 'site_notices#index'
   end

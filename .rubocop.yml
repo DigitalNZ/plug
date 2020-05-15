@@ -1,20 +1,6 @@
-inherit_from:
-  - .rubocop_todo.yml
-  - .rubocop_strict.yml
-  - .rubocop_style.yml
-
-inherit_mode:
-  merge:
-    - Exclude
-
-require:
-  - rubocop-performance
-  - rubocop-rails
-  - rubocop-rspec
-  - standard/cop/semantic_blocks
-
 inherit_gem:
-  standard: config/base.yml
+  boost-styles:
+    - rubocop_default.yml
 
 AllCops:
   Include:

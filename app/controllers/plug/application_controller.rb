@@ -1,9 +1,9 @@
+# frozen_string_literal: true
+
 module Plug
   class ApplicationController < ActionController::Base
     protect_from_forgery with: :exception
 
-    if Plug.auth_user.present? && Plug.auth_password.present?
-      http_basic_authenticate_with name: Plug.auth_user, password: Plug.auth_password
-    end
+    http_basic_authenticate_with name: Plug.auth_user, password: Plug.auth_password if Plug.auth_user.present? && Plug.auth_password.present?
   end
 end

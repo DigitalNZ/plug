@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Plug
   class SiteNotice < ApplicationRecord
     include AASM

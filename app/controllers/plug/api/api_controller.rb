@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Plug
   module Api
     class ApiController < ActionController::Base

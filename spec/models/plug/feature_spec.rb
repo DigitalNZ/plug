@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 module Plug
   RSpec.describe Feature, type: :model do
     context 'validations' do
-      it { should validate_presence_of(:name).with_message('Feature name is required') }
-      it { should validate_presence_of(:state).with_message('Feature state is required') }
+      it { is_expected.to validate_presence_of(:name).with_message('Feature name is required') }
+      it { is_expected.to validate_presence_of(:state).with_message('Feature state is required') }
 
       # For some reason, shoulda-matchers can't validate uniqueness with message. :(
       it 'validates uniqueness' do

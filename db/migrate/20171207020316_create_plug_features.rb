@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreatePlugFeatures < ActiveRecord::Migration
   def change
     create_table :plug_features do |t|

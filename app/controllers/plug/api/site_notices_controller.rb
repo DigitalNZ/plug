@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_dependency 'plug/application_controller'
 
 module Plug

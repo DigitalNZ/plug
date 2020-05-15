@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 require_dependency 'plug/application_controller'
 
 module Plug
   class FeaturesController < ApplicationController
     if Rails.version.to_i < 5
-      before_filter :set_feature, only: [:edit, :update, :destroy]
+      before_filter :set_feature, only: %i[edit update destroy]
     else
-      before_action :set_feature, only: [:edit, :update, :destroy]
+      before_action :set_feature, only: %i[edit update destroy]
     end
 
     # GET /features
@@ -22,8 +24,7 @@ module Plug
     end
 
     # GET /features/1/edit
-    def edit
-    end
+    def edit; end
 
     # POST /features
     def create
@@ -56,7 +57,7 @@ module Plug
     def task_execution
       begin
         Plug::TaskExecutionService.new(name: params[:task]).call
-      rescue => e
+      rescue StandardError => e
         flash[:alert] = e.message
       else
         flash[:notice] = "Task: #{params[:task]} has completed"
@@ -67,19 +68,19 @@ module Plug
 
     private
 
-    # Use callbacks to share common setup or constraints between actions.
-    def set_feature
-      @feature = Feature.find(params[:id])
-    end
-
-    # Only allow a trusted parameter "white list" through.
-    # TODO: Strong params not available for older Rails
-    def feature_params
-      if Rails.version.to_i < 5
-        ActiveSupport::HashWithIndifferentAccess.new(params[:feature])
-      else
-        params.require(:feature).permit(:name, :description, :state, :notice)
+      # Use callbacks to share common setup or constraints between actions.
+      def set_feature
+        @feature = Feature.find(params[:id])
       end
-    end
+
+      # Only allow a trusted parameter "white list" through.
+      # TODO: Strong params not available for older Rails
+      def feature_params
+        if Rails.version.to_i < 5
+          ActiveSupport::HashWithIndifferentAccess.new(params[:feature])
+        else
+          params.require(:feature).permit(:name, :description, :state, :notice)
+        end
+      end
   end
 end
