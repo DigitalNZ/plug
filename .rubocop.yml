@@ -1,3 +1,7 @@
+inherit_from:
+  - .rubocop_todo.yml
+  - .rubocop_strict.yml
+
 inherit_mode:
   merge:
     - Exclude
@@ -11,18 +15,17 @@ require:
 inherit_gem:
   standard: config/base.yml
 
-inherit_from:
-  - .rubocop_strict.yml
-
 AllCops:
   Include:
     - '**/*.rb'
   Exclude:
+    - '**/bin/**/*'
     - '**/config/environments/**/*'
     - '**/config/application.rb'
     - '**/config/environment.rb'
     - '**/config/puma.rb'
     - '**/config/boot.rb'
+    - '**/spec/dummy/**/*'
     - '**/spec/*_helper.rb'
     - '**/spec/**/support/**/*'
     - 'lib/generators/**/*'

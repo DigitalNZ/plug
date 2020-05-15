@@ -1,8 +1,8 @@
 module Plug
   module Configuration
-    AUTH_USER         = ''
-    AUTH_PASSWORD     = ''
-    ALLOW_DELETE      = true
+    AUTH_USER = ""
+    AUTH_PASSWORD = ""
+    ALLOW_DELETE = true
 
     VALID_OPTIONS_KEYS = [
       :auth_user,
@@ -13,14 +13,14 @@ module Plug
       :themes
     ].freeze
 
-    attr_accessor *VALID_OPTIONS_KEYS
+    attr_accessor(*VALID_OPTIONS_KEYS)
 
     def configure
       yield self
     end
 
     def options
-      Hash[ * VALID_OPTIONS_KEYS.map { |key| [key, send(key)] }.flatten ]
+      Hash[* VALID_OPTIONS_KEYS.map { |key| [key, send(key)] }.flatten]
     end
   end
 end

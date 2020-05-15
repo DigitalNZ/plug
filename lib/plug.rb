@@ -1,6 +1,6 @@
-require 'plug/engine'
-require 'plug/configuration'
-require 'plug/constraint'
+require "plug/engine"
+require "plug/configuration"
+require "plug/constraint"
 
 module Plug
   extend self
@@ -12,9 +12,9 @@ module Plug
   #
   # @return [Boolean] true - Feature found and enabled | true - Feature not found (We don't want to block) | false - Feature was set to disabled
   def enabled?(arg)
-    return get_feature(arg).enabled?
+    get_feature(arg).enabled?
   rescue
-    return true
+    true
   end
 
   #
@@ -28,20 +28,20 @@ module Plug
 
     render_notice(feature.notice, &block) unless feature.enabled? || feature.notice.blank?
   rescue
-    return nil
+    nil
   end
 
   private
 
-    def get_feature(arg)
-      arg = arg.to_s if arg.is_a? Symbol
+  def get_feature(arg)
+    arg = arg.to_s if arg.is_a? Symbol
 
-      return Plug::Feature.slug_and_name(arg).first
-    end
+    Plug::Feature.slug_and_name(arg).first
+  end
 
-    def render_notice(notice, &block)
-      return notice unless block_given?
+  def render_notice(notice, &block)
+    return notice unless block_given?
 
-      yield(notice)
-    end
+    yield(notice)
+  end
 end

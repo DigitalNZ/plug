@@ -1,5 +1,4 @@
-
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Plug::Concerns::Themeable do
   class TestModel
@@ -8,15 +7,15 @@ RSpec.describe Plug::Concerns::Themeable do
     attr_accessor :theme
 
     def initialize
-      @theme = 'background: orange; icon:flag'
+      @theme = "background: orange; icon:flag"
     end
   end
 
-  describe '#icon' do
+  describe "#icon" do
     let(:model) { TestModel.new }
 
-    it 'has returns flag' do
-      expect(model.icon).to eq 'flag'
+    it "has returns flag" do
+      expect(model.icon).to eq "flag"
     end
   end
 end

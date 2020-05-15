@@ -1,4 +1,4 @@
-require 'active_support/concern'
+require "active_support/concern"
 
 module Plug
   module Concerns
@@ -6,9 +6,8 @@ module Plug
       extend ActiveSupport::Concern
 
       included do
-
         def icon
-          theme.split(';').last.split(':').last
+          theme.split(";").last.split(":").last
         end
       end
     end

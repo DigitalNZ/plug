@@ -1,4 +1,4 @@
-require_dependency 'plug/application_controller'
+require_dependency "plug/application_controller"
 
 module Plug
   module Api
