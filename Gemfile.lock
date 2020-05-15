@@ -1,13 +1,13 @@
 GIT
   remote: https://github.com/boost/boost-styles.git
-  revision: 4ed02271430a9366f72e7172d550e26bcc3e6046
+  revision: 3c7289d3f55520c9ef12f46f6d52408b708288b0
   specs:
-    boost-styles (0.1.0)
+    boost-styles (0.1.1)
       haml_lint (~> 0.33)
-      rubocop (~> 0.79)
+      rubocop (~> 0.83.0)
       rubocop-performance (~> 1.5.2)
-      rubocop-rails (~> 2.4.1)
-      rubocop-rspec (~> 1.37.1)
+      rubocop-rails (~> 2.5.2)
+      rubocop-rspec (~> 1.39.0)
 
 PATH
   remote: .
@@ -205,10 +205,11 @@ GEM
       unicode-display_width (>= 1.4.0, < 2.0)
     rubocop-performance (1.5.2)
       rubocop (>= 0.71.0)
-    rubocop-rails (2.4.2)
+    rubocop-rails (2.5.2)
+      activesupport
       rack (>= 1.1)
       rubocop (>= 0.72.0)
-    rubocop-rspec (1.37.1)
+    rubocop-rspec (1.39.0)
       rubocop (>= 0.68.1)
     ruby-progressbar (1.10.1)
     ruby_parser (3.14.2)
