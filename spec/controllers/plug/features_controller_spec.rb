@@ -111,7 +111,7 @@ module Plug
       end
 
       it 'executes a rake task' do
-        expect(::Rake::Task[task]).to receive(:execute) { nil }
+        expect(Plug::TaskExecutionService).to receive(:new)
         post :task_execution, params: { task: task }
       end
 
@@ -120,7 +120,7 @@ module Plug
       end
 
       it 'sets a flash notice when the job was successful' do
-        post :task_execution, params: { task: 'tmp:cache:clear' }
+        post :task_execution, params: { task: task }
         expect(flash[:notice]).to eq "Task: #{task} has completed"
       end
 
