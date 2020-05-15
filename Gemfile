@@ -13,4 +13,10 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem 'rubocop', group: [:development, :test], require: false
+group :development, :test do
+  gem 'rubocop', '~> 0.82.0', require: false
+  gem 'rubocop-performance', '~> 1.5.2', require: false
+  gem 'rubocop-rails', '~> 2.5.2', require: false
+  gem 'rubocop-rspec', '~> 1.39.0', require: false
+  gem 'standard', '~> 0.4.1'
+end
