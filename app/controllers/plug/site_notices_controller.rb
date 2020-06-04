@@ -6,6 +6,8 @@ module Plug
       before_filter :set_site_notice, only: [:edit, :update, :destroy]
     else
       before_action :set_site_notice, only: [:edit, :update, :destroy]
+
+      content_security_policy false
     end
 
     # GET /site_notices

@@ -11,7 +11,8 @@
     = f.text_field :name
   .field
     = f.label :notice
-    = f.text_area :notice, rows: 10
+    = f.hidden_field :notice
+    %trix-editor{ input: 'site_notice_notice' }
   .field
     = f.label :state
     = f.select :state, ['enabled', 'disabled']

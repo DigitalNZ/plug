@@ -1,11 +1,11 @@
 .state {
   max-width: 3rem;
 
-  @include element('enabled') {
+  @include modifier('enabled') {
     color: $jungle-green;
   }
 
-  @include element('disabled') {
+  @include modifier('disabled') {
     color: $tall-poppy;
   }
 }
