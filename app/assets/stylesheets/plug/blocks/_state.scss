@@ -1,4 +1,6 @@
 .state {
+  max-width: 3rem;
+
   @include element('enabled') {
     color: $jungle-green;
   }
