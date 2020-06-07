@@ -82,6 +82,31 @@ Add buttons to the config block to perform rake tasks from the plug dashboard
   ]
 ```
 
+#### Themes
+Themes can be added in Site Notices. Themes are just string stored in the database. You still need to style the theme.
+
+By default, we have `default` and `dark` in `config/plug.rb`
+
+```haml
+- theme_class = "site-notice--#{site_notice.theme}"
+
+.site-notice{ class: theme_class }
+  %p My site notice
+```
+
+```scss
+// BEM
+.site-notice {
+  @include modifier('default') {
+    ...
+  }
+  
+  @include modifier('dark') {
+    ...
+  }
+}
+```
+
 ### Creating new migrations
 
 ```bash
