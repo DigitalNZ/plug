@@ -19,10 +19,10 @@
     %table
       %thead
         %tr
-          %th Name
+          %th{ width: 200 } Name
           %th Description
-          %th Slug
-          %th State
+          %th{ width: 200 } Slug
+          %th{ width: 150, align: 'center' } State
           
           - if Plug.allow_delete
             %th Actions
@@ -33,11 +33,11 @@
             %td= link_to feature.name, edit_feature_path(feature), class: 'strong'
             %td= feature.description
             %td= feature.slug
-            %td
+            %td{ width: 150, align: 'center' }
               - if feature.state == 'enabled'
-                %i.fas.fa-check-circle.fa-2x.state__enabled
+                %i.fas.fa-check-circle.fa-2x.state.state--enabled
               - else
-                %i.fas.fa-times-circle.fa-2x.state__disabled
+                %i.fas.fa-times-circle.fa-2x.state.state--disabled
 
             - if Plug.allow_delete
               %td= link_to 'Destroy', feature, method: :delete, data: { confirm: 'Are you sure?' }

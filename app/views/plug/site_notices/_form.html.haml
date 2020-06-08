@@ -11,13 +11,14 @@
     = f.text_field :name
   .field
     = f.label :notice
-    = f.text_area :notice, rows: 10
+    = f.hidden_field :notice
+    %trix-editor{ input: 'site_notice_notice' }
   .field
     = f.label :state
     = f.select :state, ['enabled', 'disabled']
   .field
     = f.label :theme
-    = f.select :theme, Plug.themes.map { |theme| [theme[:name], "#{theme[:style].to_a.map { |s| s.join(':') }.join(';')}"] }
+    = f.select :theme, Plug.themes
   .actions.clearfix
     .float-left
       = link_to 'Back', site_notices_path, class: 'button'
