@@ -13,3 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+// Prevent drag and drop from the editor
+document.addEventListener('trix-file-accept', function(event) {
+  event.preventDefault();
+});
