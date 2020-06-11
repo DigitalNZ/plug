@@ -17,7 +17,7 @@ module Plug
       it 'returns a success response' do
         get :index, params: {}
 
-        expect(response).to be_success
+        expect(response).to be_successful
       end
     end
 
@@ -25,7 +25,7 @@ module Plug
     # describe 'GET #show' do
     #   it 'returns a success response' do
     #     get :show, params: { id: site_notice.to_param }
-    #     expect(response).to be_success
+    #     expect(response).to be_successful
     #   end
     # end
 
@@ -33,7 +33,7 @@ module Plug
       it 'returns a success response' do
         get :new, params: {}
 
-        expect(response).to be_success
+        expect(response).to be_successful
       end
     end
 
@@ -41,7 +41,7 @@ module Plug
       it 'returns a success response' do
         get :edit, params: { id: site_notice.to_param }
 
-        expect(response).to be_success
+        expect(response).to be_successful
       end
     end
 
@@ -64,7 +64,7 @@ module Plug
         it "returns a success response (i.e. to display the 'new' template)" do
           post :create, params: { site_notice: invalid_attributes }
 
-          expect(response).to be_success
+          expect(response).to be_successful
         end
       end
     end
@@ -90,7 +90,7 @@ module Plug
         it "returns a success response (i.e. to display the 'edit' template)" do
           put :update, params: { id: site_notice.to_param, site_notice: invalid_attributes }
 
-          expect(response).to be_success
+          expect(response).to be_successful
         end
       end
     end
