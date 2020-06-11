@@ -4,13 +4,12 @@ A Rails engine to turn on/off features (Feature flipper).
 
 ### Features
 
-- Supports Rails 3 and above
-- MySQL
-- Set notices
+- Manage features with notices
+- Manage site notices with themes
 
 ### Prerequisites
 
-- Rails version 3 and above
+- Rails version 5 and above
 - MySQL
 
 ### Getting Started
@@ -32,9 +31,7 @@ And run the install generator:
 ```bash
 → rails g plug:install
 → rails plug:install:migrations
-→ rake plug:install:migrations # For Rails <= 3.x
-→ rails db:migrate # Newer version of Rails
-→ rake db:migrate # Older version of Rails
+→ rails db:migrate
 → rails s
 ```
 
@@ -85,7 +82,7 @@ Add buttons to the config block to perform rake tasks from the plug dashboard
 #### Themes
 Themes can be added in Site Notices. Themes are just string stored in the database. You still need to style the theme.
 
-By default, we have `default` and `dark` in `config/plug.rb`
+By default, we have `default` and `dark` in `config/plug.rb`. Below is an example on how you can utilise the theme string.
 
 ```haml
 - theme_class = "site-notice--#{site_notice.theme}"
@@ -125,7 +122,7 @@ By default, we have `default` and `dark` in `config/plug.rb`
 
 ### Publishing to `rubygems.org`
 
-Make sure to bump the version. Rubygems don't accept version overrides.
+Make sure to **bump** the version. Rubygems don't accept version overrides.
 
 ```bash
 → gem build plug.gemspec
