@@ -10,6 +10,7 @@ module Plug
 
       # For some reason, shoulda-matchers can't validate uniqueness with message. :(
       it 'validates uniqueness' do
+        create(:feature, name: 'Unique')
         duplicate_feature = build(:feature, name: 'Unique')
         duplicate_feature.valid?
 

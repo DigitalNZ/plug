@@ -10,6 +10,7 @@ module Plug
 
       # For some reason, shoulda-matchers can't validate uniqueness with message. :(
       it 'validates uniqueness' do
+        create(:site_notice, name: 'Unique')
         duplicate_site_notice = build(:site_notice, name: 'Unique')
         duplicate_site_notice.valid?
 
