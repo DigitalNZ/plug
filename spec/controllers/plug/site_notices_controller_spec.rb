@@ -21,14 +21,6 @@ module Plug
       end
     end
 
-    # We don't want this for now
-    # describe 'GET #show' do
-    #   it 'returns a success response' do
-    #     get :show, params: { id: site_notice.to_param }
-    #     expect(response).to be_successful
-    #   end
-    # end
-
     describe 'GET #new' do
       it 'returns a success response' do
         get :new, params: {}
