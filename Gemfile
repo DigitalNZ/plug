@@ -13,4 +13,4 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem 'rubocop', group: [:development, :test], require: false
+gem 'boost-styles', git: 'https://github.com/boost/boost-styles.git'
