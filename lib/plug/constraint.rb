@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 module Plug
   class Constraint
     def initialize(feature)
       @feature = feature
     end
 
-    def matches?(request)
+    def matches?(_request)
       Plug.enabled?(@feature)
-    rescue
+    rescue StandardError
       true
     end
   end

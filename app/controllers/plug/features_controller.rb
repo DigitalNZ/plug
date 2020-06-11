@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 require_dependency 'plug/application_controller'
 
 module Plug
   class FeaturesController < ApplicationController
     if Rails.version.to_i < 5
-      before_filter :set_feature, only: [:edit, :update, :destroy]
+      before_filter :set_feature, only: %i[edit update destroy]
     else
-      before_action :set_feature, only: [:edit, :update, :destroy]
+      before_action :set_feature, only: %i[edit update destroy]
     end
 
     # GET /features
@@ -65,6 +67,7 @@ module Plug
     end
 
     private
+
       # Use callbacks to share common setup or constraints between actions.
       def set_feature
         @feature = Feature.find(params[:id])

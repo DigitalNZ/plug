@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 module Plug
@@ -14,6 +16,7 @@ module Plug
     describe 'GET #index' do
       it 'returns a success response' do
         get :index, params: {}
+
         expect(response).to be_success
       end
     end
@@ -29,6 +32,7 @@ module Plug
     describe 'GET #new' do
       it 'returns a success response' do
         get :new, params: {}
+
         expect(response).to be_success
       end
     end
@@ -36,6 +40,7 @@ module Plug
     describe 'GET #edit' do
       it 'returns a success response' do
         get :edit, params: { id: feature.to_param }
+
         expect(response).to be_success
       end
     end
@@ -43,13 +48,14 @@ module Plug
     describe 'POST #create' do
       context 'with valid params' do
         it 'creates a new Feature' do
-          expect {
+          expect do
             post :create, params: { feature: valid_attributes }
-          }.to change(Feature, :count).by(1)
+          end.to change(Feature, :count).by(1)
         end
 
         it 'redirects to the created feature' do
           post :create, params: { feature: valid_attributes }
+
           expect(response).to redirect_to(features_path)
         end
       end
@@ -57,6 +63,7 @@ module Plug
       context 'with invalid params' do
         it "returns a success response (i.e. to display the 'new' template)" do
           post :create, params: { feature: invalid_attributes }
+
           expect(response).to be_success
         end
       end
@@ -69,13 +76,13 @@ module Plug
         it 'updates the requested feature' do
           put :update, params: { id: feature.to_param, feature: new_attributes }
           feature.reload
+
           expect(feature.name).to eq new_attributes[:name]
-          expect(feature.notice).to eq new_attributes[:notice]
-          expect(feature.description).to eq new_attributes[:description]
         end
 
         it 'redirects to the feature' do
           put :update, params: { id: feature.to_param, feature: valid_attributes }
+
           expect(response).to redirect_to(features_path)
         end
       end
@@ -83,6 +90,7 @@ module Plug
       context 'with invalid params' do
         it "returns a success response (i.e. to display the 'edit' template)" do
           put :update, params: { id: feature.to_param, feature: invalid_attributes }
+
           expect(response).to be_success
         end
       end
@@ -92,13 +100,14 @@ module Plug
       it 'destroys the requested feature' do
         feature = create(:feature)
 
-        expect {
+        expect do
           delete :destroy, params: { id: feature.to_param }
-        }.to change(Feature, :count).by(-1)
+        end.to change(Feature, :count).by(-1)
       end
 
       it 'redirects to the features list' do
         delete :destroy, params: { id: feature.to_param }
+
         expect(response).to redirect_to(features_path)
       end
     end
@@ -112,20 +121,23 @@ module Plug
 
       it 'executes a rake task' do
         expect(Plug::TaskExecutionService).to receive(:new)
+
         post :task_execution, params: { task: task }
       end
 
       it 'redirects to plug root path' do
-        expect(post :task_execution, params: { task: task }).to redirect_to root_path
+        expect(post(:task_execution, params: { task: task })).to redirect_to root_path
       end
 
       it 'sets a flash notice when the job was successful' do
         post :task_execution, params: { task: task }
+
         expect(flash[:notice]).to eq "Task: #{task} has completed"
       end
 
       it 'sets a flash alert when the job was NOT successful' do
         post :task_execution, params: { task: 'not:a:valid:task' }
+
         expect(flash[:alert]).to eq "Don't know how to build task 'not:a:valid:task' (See the list of available tasks with `rake --tasks`)"
       end
     end

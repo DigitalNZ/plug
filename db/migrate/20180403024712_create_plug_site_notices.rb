@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreatePlugSiteNotices < ActiveRecord::Migration
   def change
     create_table :plug_site_notices do |t|

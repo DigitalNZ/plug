@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 module Plug
@@ -10,7 +12,7 @@ module Plug
       end
 
       it 'does not route to #show' do
-        expect(get: '/site_notices/my-slug').to_not be_routable
+        expect(get: '/site_notices/my-slug').not_to be_routable
       end
 
       it 'routes to #new' do
