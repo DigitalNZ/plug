@@ -15,4 +15,4 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem 'boost-styles', git: 'https://github.com/boost/boost-styles.git', branch: 'ba/bump-version'
+gem 'boost-styles'
