@@ -120,16 +120,18 @@ GEM
     method_source (1.0.0)
     mimemagic (0.3.5)
     mini_mime (1.0.2)
-    mini_portile2 (2.4.0)
+    mini_portile2 (2.5.0)
     minitest (5.14.2)
     nio4r (2.5.4)
-    nokogiri (1.10.10)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.11.1)
+      mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
     parallel (1.12.1)
     parser (2.5.0.5)
       ast (~> 2.4.0)
     powerpack (0.1.1)
     public_suffix (3.0.2)
+    racc (1.5.2)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -243,4 +245,4 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
-   1.17.3
+   2.2.5
