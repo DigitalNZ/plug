@@ -1,4 +1,4 @@
-class CreatePlugSiteNotices < ActiveRecord::Migration
+class CreatePlugSiteNotices < ActiveRecord::Migration[5.1]
   def change
     create_table :plug_site_notices do |t|
       t.string :name

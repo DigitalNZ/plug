@@ -4,7 +4,10 @@ rvm:
 cache: bundler
 bundler_args: --without production
 sudo: false
-script: support/ci.sh
+script: |
+  RAILS_ENV=test bin/rails db:migrate && \
+  bundle exec rspec && \
+  bundle exec rubocop
 
 addons:
   code_climate:
