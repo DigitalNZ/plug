@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180424015828) do
+ActiveRecord::Schema.define(version: 2018_04_24_015828) do
 
   create_table "plug_features", force: :cascade do |t|
     t.string "name"
