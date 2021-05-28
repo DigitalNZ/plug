@@ -65,19 +65,19 @@ module Plug
     end
 
     private
-      # Use callbacks to share common setup or constraints between actions.
-      def set_feature
-        @feature = Feature.find(params[:id])
-      end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_feature
+      @feature = Feature.find(params[:id])
+    end
 
-      # Only allow a trusted parameter "white list" through.
-      # TODO: Strong params not available for older Rails
-      def feature_params
-        if Rails.version.to_i < 5
-          ActiveSupport::HashWithIndifferentAccess.new(params[:feature])
-        else
-          params.require(:feature).permit(:name, :description, :state, :notice)
-        end
+    # Only allow a trusted parameter "white list" through.
+    # TODO: Strong params not available for older Rails
+    def feature_params
+      if Rails.version.to_i < 5
+        ActiveSupport::HashWithIndifferentAccess.new(params[:feature])
+      else
+        params.require(:feature).permit(:name, :description, :state, :notice)
       end
+    end
   end
 end
