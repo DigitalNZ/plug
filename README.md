@@ -1,4 +1,4 @@
-# Plug [![Maintainability](https://api.codeclimate.com/v1/badges/6246b1cd8e42603c42f6/maintainability)](https://codeclimate.com/github/DigitalNZ/plug/maintainability) [![Build Status](https://travis-ci.org/DigitalNZ/plug.svg?branch=master)](https://travis-ci.org/DigitalNZ/plug)
+# Plug [![Maintainability](https://api.codeclimate.com/v1/badges/6246b1cd8e42603c42f6/maintainability)](https://codeclimate.com/github/DigitalNZ/plug/maintainability)
 
 A Rails engine to turn on/off features (Feature flipper).
 
