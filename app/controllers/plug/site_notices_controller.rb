@@ -39,7 +39,7 @@ module Plug
 
     # PATCH/PUT /site_notices/1
     def update
-      if @site_notice.update_attributes(site_notice_params)
+      if @site_notice.update(site_notice_params)
         redirect_to site_notices_path, notice: 'Site Notice was successfully updated.'
       else
         render :edit

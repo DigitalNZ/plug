@@ -39,7 +39,7 @@ module Plug
 
     # PATCH/PUT /features/1
     def update
-      if @feature.update_attributes(feature_params)
+      if @feature.update(feature_params)
         redirect_to features_path, notice: 'Feature was successfully updated.'
       else
         render :edit
