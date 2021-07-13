@@ -106,4 +106,3 @@ Layout/TrailingWhitespace:
 # Use my_method(my_arg) not my_method( my_arg ) or my_method my_arg.
 Lint/RequireParentheses:
   Enabled: true
-
