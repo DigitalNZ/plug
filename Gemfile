@@ -15,5 +15,7 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem 'rubocop'
-gem 'rubocop-rspec'
+group :development, :test do
+  gem 'rubocop'
+  gem 'rubocop-rspec', require: false
+end
