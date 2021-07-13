@@ -32,8 +32,8 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'factory_bot_rails'
-  s.add_development_dependency 'rails-controller-testing', '~> 1.0.2'
-  s.add_development_dependency 'rspec-rails', '~> 3.7.1'
+  s.add_development_dependency 'rails-controller-testing'
+  s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'shoulda-matchers'
   s.add_development_dependency 'sqlite3'
