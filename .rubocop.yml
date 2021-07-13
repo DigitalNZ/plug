@@ -1,3 +1,7 @@
+inherit_gem:
+  boost-styles:
+    - rubocop_default.yml
+
 AllCops:
   TargetRubyVersion: 2.6
   # RuboCop has a bunch of cops enabled by default. This setting tells RuboCop
@@ -6,8 +10,6 @@ AllCops:
   Exclude:
     - '**/templates/**/*'
     - '**/vendor/**/*'
-    - '**/vendor/**/.*'
-    - '**/node_modules/**/*'
     - 'actionpack/lib/action_dispatch/journey/parser.rb'
     - 'spec/dummy/db/*.*'
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Plug::Configuration do
@@ -5,6 +7,7 @@ RSpec.describe Plug::Configuration do
 
   it 'allows the addition of buttons to the configuration' do
     Plug.buttons = buttons_config
+
     expect(Plug.buttons).to eq buttons_config
   end
 end

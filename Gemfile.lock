@@ -84,6 +84,12 @@ GEM
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.2)
+    boost-styles (0.1.2)
+      haml_lint (~> 0.33)
+      rubocop (~> 0.8)
+      rubocop-performance (~> 1)
+      rubocop-rails (~> 2)
+      rubocop-rspec (~> 1)
     builder (3.2.4)
     capybara (3.35.3)
       addressable
@@ -116,6 +122,12 @@ GEM
       haml (>= 4.0.6, < 6.0)
       html2haml (>= 1.0.1)
       railties (>= 5.1)
+    haml_lint (0.37.1)
+      haml (>= 4.0, < 5.3)
+      parallel (~> 1.10)
+      rainbow
+      rubocop (>= 0.50.0)
+      sysexits (~> 1.1)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
@@ -200,20 +212,27 @@ GEM
       rspec-mocks (~> 3.7.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
-    rubocop (1.18.3)
+    rubocop (0.93.1)
       parallel (~> 1.10)
-      parser (>= 3.0.0.0)
+      parser (>= 2.7.1.5)
       rainbow (>= 2.2.2, < 4.0)
-      regexp_parser (>= 1.8, < 3.0)
+      regexp_parser (>= 1.8)
       rexml
-      rubocop-ast (>= 1.7.0, < 2.0)
+      rubocop-ast (>= 0.6.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 3.0)
+      unicode-display_width (>= 1.4.0, < 2.0)
     rubocop-ast (1.7.0)
       parser (>= 3.0.1.1)
-    rubocop-rspec (2.4.0)
-      rubocop (~> 1.0)
-      rubocop-ast (>= 1.1.0)
+    rubocop-performance (1.10.2)
+      rubocop (>= 0.90.0, < 2.0)
+      rubocop-ast (>= 0.4.0)
+    rubocop-rails (2.9.1)
+      activesupport (>= 4.2.0)
+      rack (>= 1.1)
+      rubocop (>= 0.90.0, < 2.0)
+    rubocop-rspec (1.44.1)
+      rubocop (~> 0.87)
+      rubocop-ast (>= 0.7.1)
     ruby-progressbar (1.11.0)
     ruby_parser (3.16.0)
       sexp_processor (~> 4.15, >= 4.15.1)
@@ -242,12 +261,13 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    sysexits (1.2.0)
     temple (0.8.2)
     thor (1.1.0)
     tilt (2.0.10)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    unicode-display_width (2.0.0)
+    unicode-display_width (1.7.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -259,13 +279,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  boost-styles
   capybara
   factory_bot_rails
   plug!
   rails-controller-testing (~> 1.0.2)
   rspec-rails (~> 3.7.1)
-  rubocop
-  rubocop-rspec
   selenium-webdriver
   shoulda-matchers
   sqlite3
