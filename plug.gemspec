@@ -11,9 +11,9 @@ Gem::Specification.new do |s|
   s.version     = Plug::VERSION
   s.authors     = %w[Boost DNZ]
   s.email       = ['info@boost.co.nz']
-  s.homepage    = 'https://github.com/hapiben/plug'
+  s.homepage    = 'https://github.com/digitalnz/plug'
   s.summary     = 'Rails engine that can plug/unplug features'
-  s.description = 'Rails engine that can plug/unplug features with notice (WIP)'
+  s.description = 'Rails engine that can plug/unplug features with notice'
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
