@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 module Plug
@@ -14,7 +16,7 @@ module Plug
       end
 
       it 'does not route to #show' do
-        expect(get: '/features/1').to_not be_routable
+        expect(get: '/features/1').not_to be_routable
       end
 
       it 'routes to #edit' do

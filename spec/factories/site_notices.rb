@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :site_notice, class: '::Plug::SiteNotice' do
     name   { 'Awesome Site Notice' }

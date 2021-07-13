@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :feature, class: '::Plug::Feature' do
     name        { 'Awesome feature' }

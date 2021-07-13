@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 module Plug
@@ -15,27 +17,27 @@ module Plug
         end
 
         it 'does not route to #new' do
-          expect(get: '/api/site_notices/new').to_not route_to('plug/api/site_notices#new', format: :json)
+          expect(get: '/api/site_notices/new').not_to route_to('plug/api/site_notices#new', format: :json)
         end
 
         it 'does not route to #edit' do
-          expect(get: '/api/site_notices/1/edit').to_not be_routable
+          expect(get: '/api/site_notices/1/edit').not_to be_routable
         end
 
         it 'does not route to #create' do
-          expect(post: '/api/site_notices').to_not be_routable
+          expect(post: '/api/site_notices').not_to be_routable
         end
 
         it 'does not route to #update via PUT' do
-          expect(put: '/api/site_notices/1').to_not be_routable
+          expect(put: '/api/site_notices/1').not_to be_routable
         end
 
         it 'does not route to #update via PATCH' do
-          expect(patch: '/api/site_notices/1').to_not be_routable
+          expect(patch: '/api/site_notices/1').not_to be_routable
         end
 
         it 'does not route to #destroy' do
-          expect(delete: '/api/site_notices/1').to_not be_routable
+          expect(delete: '/api/site_notices/1').not_to be_routable
         end
       end
     end

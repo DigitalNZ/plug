@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 module Plug
   class InstallGenerator < Rails::Generators::Base
-    source_root File.expand_path('../templates', __FILE__)
+    source_root File.expand_path('templates', __dir__)
 
     def copy_initializer_file
       copy_file 'plug.rb', 'config/initializers/plug.rb'

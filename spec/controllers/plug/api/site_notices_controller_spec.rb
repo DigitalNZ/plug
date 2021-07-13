@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 module Plug
@@ -16,7 +18,7 @@ module Plug
         before { get :index, params: {} }
 
         it 'returns a success response' do
-          expect(response).to be_success
+          expect(response).to be_successful
         end
 
         it 'returns response json format' do
@@ -28,7 +30,7 @@ module Plug
         before { get :show, params: { slug: site_notice.slug } }
 
         it 'returns a success response' do
-          expect(response).to be_success
+          expect(response).to be_successful
         end
 
         it 'returns response json format' do

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 # Declare your gem's dependencies in plug.gemspec.
@@ -13,4 +15,4 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem 'rubocop', group: [:development, :test], require: false
+gem 'boost-styles'
