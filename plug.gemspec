@@ -9,8 +9,8 @@ require 'plug/version'
 Gem::Specification.new do |s|
   s.name        = 'plug'
   s.version     = Plug::VERSION
-  s.authors     = %w[Ben Boost]
-  s.email       = ['benedict@boost.co.nz', 'info@boost.co.nz']
+  s.authors     = %w[Boost DNZ]
+  s.email       = ['info@boost.co.nz']
   s.homepage    = 'https://github.com/hapiben/plug'
   s.summary     = 'Rails engine that can plug/unplug features'
   s.description = 'Rails engine that can plug/unplug features with notice (WIP)'
