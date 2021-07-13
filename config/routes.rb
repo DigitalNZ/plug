@@ -12,6 +12,8 @@ Plug::Engine.routes.draw do
   namespace :api, defaults: { format: :json } do
     get '/site_notices/:slug', to: 'site_notices#show'
     get '/site_notices', to: 'site_notices#index'
+    get '/features/:slug', to: 'features#show'
+    get '/features', to: 'features#index'
   end
 
   post '/task', to: 'features#task_execution', as: :task_execution

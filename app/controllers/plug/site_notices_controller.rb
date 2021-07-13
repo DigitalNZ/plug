@@ -59,14 +59,14 @@ module Plug
         @site_notice = SiteNotice.find(params[:id])
       end
 
-      # Only allow a trusted parameter "white list" through.
-      # TODO: Strong params not available for older Rails
-      def site_notice_params
-        if Rails.version.to_i < 5
-          ActiveSupport::HashWithIndifferentAccess.new(params[:site_notice])
-        else
-          params.require(:site_notice).permit(:name, :notice, :state, :theme)
-        end
+    # Only allow a trusted parameter "white list" through.
+    # TODO: Strong params not available for older Rails
+    def site_notice_params
+      if Rails.version.to_i < 5
+        ActiveSupport::HashWithIndifferentAccess.new(params[:site_notice])
+      else
+        params.require(:site_notice).permit(:name, :notice, :state, :theme)
       end
+    end
   end
 end
