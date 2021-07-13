@@ -1,7 +1,3 @@
-inherit_gem:
-  boost-styles:
-    - rubocop_default.yml
-
 AllCops:
   TargetRubyVersion: 2.6
   # RuboCop has a bunch of cops enabled by default. This setting tells RuboCop
