@@ -16,6 +16,9 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 group :development, :test do
+  gem 'pry-byebug'
+  gem 'pry-rails'
+
   gem 'rubocop'
   gem 'rubocop-rspec', require: false
 end

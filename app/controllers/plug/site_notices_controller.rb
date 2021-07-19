@@ -4,11 +4,7 @@ require_dependency 'plug/application_controller'
 
 module Plug
   class SiteNoticesController < ApplicationController
-    if Rails.version.to_i < 5
-      before_filter :set_site_notice, only: %i[edit update destroy]
-    else
-      before_action :set_site_notice, only: %i[edit update destroy]
-    end
+    before_action :set_site_notice, only: %i[edit update destroy]
 
     # GET /site_notices
     def index
@@ -60,13 +56,8 @@ module Plug
     end
 
     # Only allow a trusted parameter "white list" through.
-    # TODO: Strong params not available for older Rails
     def site_notice_params
-      if Rails.version.to_i < 5
-        ActiveSupport::HashWithIndifferentAccess.new(params[:site_notice])
-      else
-        params.require(:site_notice).permit(:name, :notice, :state, :theme)
-      end
+      params.require(:site_notice).permit(:name, :notice, :state, :theme)
     end
   end
 end

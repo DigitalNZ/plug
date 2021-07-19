@@ -4,11 +4,7 @@ require_dependency 'plug/application_controller'
 
 module Plug
   class FeaturesController < ApplicationController
-    if Rails.version.to_i < 5
-      before_filter :set_feature, only: %i[edit update destroy]
-    else
-      before_action :set_feature, only: %i[edit update destroy]
-    end
+    before_action :set_feature, only: %i[edit update destroy]
 
     # GET /features
     def index
@@ -74,13 +70,8 @@ module Plug
     end
 
     # Only allow a trusted parameter "white list" through.
-    # TODO: Strong params not available for older Rails
     def feature_params
-      if Rails.version.to_i < 5
-        ActiveSupport::HashWithIndifferentAccess.new(params[:feature])
-      else
-        params.require(:feature).permit(:name, :description, :state, :notice)
-      end
+      params.require(:feature).permit(:name, :description, :state, :notice)
     end
   end
 end
