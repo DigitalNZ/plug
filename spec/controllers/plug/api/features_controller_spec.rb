@@ -10,13 +10,13 @@ module Plug
       # adjust the attributes here as well.
       let(:valid_attributes) { attributes_for(:feature) }
       let(:invalid_attributes) { attributes_for(:feature, :invalid) }
-      let(:feature) { create(:feature) }
+      let!(:feature) { create(:feature) }
 
       describe 'GET #index' do
         before { get :index, params: {} }
 
         it 'returns a success response' do
-          expect(response).to be_success
+          expect(response).to be_successful
         end
 
         it 'returns response json format' do
@@ -28,7 +28,7 @@ module Plug
         before { get :show, params: { slug: feature.slug } }
 
         it 'returns a success response' do
-          expect(response).to be_success
+          expect(response).to be_successful
         end
 
         it 'returns response json format' do

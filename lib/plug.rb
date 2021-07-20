@@ -35,15 +35,15 @@ module Plug
 
   private
 
-    def get_feature(arg)
-      arg = arg.to_s if arg.is_a? Symbol
+  def get_feature(arg)
+    arg = arg.to_s if arg.is_a? Symbol
 
-      return Plug::Feature.slug_and_name(arg).first
-    end
+    return Plug::Feature.slug_and_name(arg).first
+  end
 
-    def render_notice(notice, &block)
-      return notice unless block_given?
+  def render_notice(notice, &block)
+    return notice unless block_given?
 
-      yield(notice)
-    end
+    yield(notice)
+  end
 end

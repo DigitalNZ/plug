@@ -9,11 +9,11 @@ require 'plug/version'
 Gem::Specification.new do |s|
   s.name        = 'plug'
   s.version     = Plug::VERSION
-  s.authors     = %w[Ben Boost]
-  s.email       = ['benedict@boost.co.nz', 'info@boost.co.nz']
-  s.homepage    = 'https://github.com/hapiben/plug'
+  s.authors     = %w[Boost DNZ]
+  s.email       = ['info@boost.co.nz']
+  s.homepage    = 'https://github.com/digitalnz/plug'
   s.summary     = 'Rails engine that can plug/unplug features'
-  s.description = 'Rails engine that can plug/unplug features with notice (WIP)'
+  s.description = 'Rails engine that can plug/unplug features with notice'
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'activeresource'
   s.add_dependency 'haml-rails'
   s.add_dependency 'jquery-rails'
-  s.add_dependency 'rails'
+  s.add_dependency 'rails', '>= 5.2'
   s.add_dependency 'sass-rails'
 
   # We don't need these for now
@@ -32,8 +32,8 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'factory_bot_rails'
-  s.add_development_dependency 'rails-controller-testing', '~> 1.0.2'
-  s.add_development_dependency 'rspec-rails', '~> 3.7.1'
+  s.add_development_dependency 'rails-controller-testing'
+  s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'shoulda-matchers'
   s.add_development_dependency 'sqlite3'
