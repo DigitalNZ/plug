@@ -21,14 +21,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'aasm'
   s.add_dependency 'activeresource'
   s.add_dependency 'haml-rails'
-  s.add_dependency 'jquery-rails'
   s.add_dependency 'rails', '>= 5.2'
   s.add_dependency 'sass-rails'
-
-  # We don't need these for now
-  # s.add_dependency 'jquery-rails'
-  # s.add_dependency 'foundation-rails', '~> 6.4.1.2'
-  # s.add_dependency 'font-awesome-rails'
 
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'factory_bot_rails'
