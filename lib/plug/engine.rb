@@ -8,10 +8,12 @@ module Plug
   class Engine < ::Rails::Engine
     isolate_namespace Plug
 
-    initializer 'plug.assets.precompile' do |app|
-      app.config.assets.precompile += %w[
-        plug/application.js plug/application.css plug/favicon.png
-      ]
+    if defined?(Sprockets)
+      initializer 'plug.assets.precompile' do |app|
+        app.config.assets.precompile += %w[
+          plug/application.js plug/application.css plug/favicon.png
+        ]
+      end
     end
 
     config.generators do |g|
