@@ -12,13 +12,12 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-# To use a debugger
-# gem 'byebug', group: [:development, :test]
+# Start debugger with binding.b [https://github.com/ruby/debug]
+# gem "debug", ">= 1.0.0"
 
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
-
   gem 'rubocop'
   gem 'rubocop-rspec', require: false
 end

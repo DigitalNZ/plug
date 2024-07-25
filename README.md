@@ -129,6 +129,15 @@ Make sure to **bump** the version. Rubygems don't accept version overrides.
 → gem push plug-<version>.gem
 ```
 
+### Publishing to `npmjs.com`
+
+Make sure to match the version with the Rubygems version.
+
+```bash
+→ npm login
+→ npm publish --access public
+```
+
 ### TODOs
 
 - Ability to disable all features using one button
