@@ -167,6 +167,8 @@ GEM
     pry-rails (0.3.9)
       pry (>= 0.10.4)
     public_suffix (5.0.1)
+    puma (6.6.0)
+      nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.7)
     rack-test (2.1.0)
@@ -273,6 +275,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-23
+  arm64-darwin-24
   x86_64-darwin-19
   x86_64-darwin-22
   x86_64-linux
@@ -283,6 +286,7 @@ DEPENDENCIES
   plug!
   pry-byebug
   pry-rails
+  puma
   rails-controller-testing
   rspec-rails
   rubocop
