@@ -1,6 +1,6 @@
 {
   "name": "@digitalnz/plug",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A Rails engine to turn on/off features (Feature flipper).",
   "main": "src/base.js",
   "files": [
