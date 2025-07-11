@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    plug (0.2.2)
+    plug (0.2.3)
       aasm
       activeresource
       haml-rails
