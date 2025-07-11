@@ -31,7 +31,7 @@
         - @features.each do |feature|
           %tr
             %td= link_to sanitize(feature.name), edit_feature_path(feature), class: 'strong'
-            %td= sanitize(feature.description)
+            %td= sanitize(feature.description, tags: %w(a p), attributes: %w(href))
             %td= feature.slug
             %td{ width: 150, align: 'center' }
               - if feature.state == 'enabled'

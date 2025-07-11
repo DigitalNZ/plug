@@ -27,7 +27,7 @@
         - @site_notices.each do |site_notice|
           %tr
             %td= link_to sanitize(site_notice.name), edit_site_notice_path(site_notice), class: 'strong'
-            %td= sanitize(site_notice.notice.html_safe)
+            %td= sanitize(site_notice.notice.html_safe, tags: %w(a p), attributes: %w(href))
             %td= site_notice.slug
             %td{ width: 150, align: 'center' }
               - if site_notice.state == 'enabled'
